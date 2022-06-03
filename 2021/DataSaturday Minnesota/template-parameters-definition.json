@@ -1,0 +1,96 @@
+{
+"Microsoft.Synapse/workspaces/notebooks": {
+        "properties":{
+            "bigDataPool":{
+                "referenceName": "="
+            }
+        }
+    },
+    "Microsoft.Synapse/workspaces/sqlscripts": {
+	 "properties": {
+         "content":{
+             "currentConnection":{
+                    "*":"-"
+                 }
+            } 
+        }
+	},
+    "Microsoft.Synapse/workspaces/pipelines": {
+        "properties": {
+            "activities": [{
+                 "typeProperties": {
+                    "waitTimeInSeconds": "-::int",
+                    "headers": "=::object"
+                }
+            }]
+        }
+    },
+    "Microsoft.Synapse/workspaces/integrationRuntimes": {
+        "properties": {
+            "typeProperties": {
+                "*": "="
+            }
+        }
+    },
+    "Microsoft.Synapse/workspaces/triggers": {
+        "properties": {
+            "typeProperties": {
+                "recurrence": {
+                    "*": "=",
+                    "interval": "=:triggerSuffix:int",
+                    "frequency": "=:-freq"
+                },
+                "maxConcurrency": "="
+            }
+        }
+    },
+    "Microsoft.Synapse/workspaces/linkedServices": {
+               "*": {
+            "properties": {
+                "typeProperties": {
+                    "accountName": "=",
+                    "username": "=",
+                    "userName": "=",
+		    "accountKey": "|",
+                    "accessKeyId": "=",
+                    "servicePrincipalId": "=",
+                    "userId": "=",
+                    "clientId": "=",
+                    "clusterUserName": "=",
+                    "clusterSshUserName": "=",
+                    "hostSubscriptionId": "=",
+                    "clusterResourceGroup": "=",
+                    "subscriptionId": "=",
+                    "resourceGroupName": "=",
+                    "tenant": "=",
+                    "dataLakeStoreUri": "-",
+                    "baseUrl": "=",
+                    "database": "=",
+                    "serviceEndpoint": "=",
+                    "batchUri": "=",
+                    "databaseName": "=",
+                    "systemNumber": "=",
+                    "server": "=",
+                    "url": "-",
+
+                    "aadResourceId": "=",
+                    "connectionString": "|:-connectionString:secureString"
+                }
+            }
+        },
+        "AzureDataLakeStore": {
+            "properties": {
+                "typeProperties": {
+                    "dataLakeStoreUri": "="
+                }
+            }
+        }
+    },
+    "Microsoft.Synapse/workspaces/datasets": {
+        "properties": {
+            "typeProperties": {
+                "*": "="
+            }
+        }
+    }
+}
