@@ -1,7 +1,7 @@
 **Meta-Data-Driven-Framework**
 
 
-This is just a small readme as a start. Any questions please ask me. I will try to update the reedme as soon as possible
+This is just a small readme as a start. Any questions please ask me. I will try to update the readme as soon as possible
 
 Create a Serverless database in Synapse and 
 
