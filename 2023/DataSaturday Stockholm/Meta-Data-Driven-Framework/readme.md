@@ -8,9 +8,13 @@ Create a Serverless database in Synapse and
 **Add the following schema's:**
 
 IF NOT EXISTS ( SELECT 1 FROM sys.schemas WHERE name = 'Current' ) EXEC ('CREATE SCHEMA [Current]')
+
 IF NOT EXISTS ( SELECT 1 FROM sys.schemas WHERE name = 'Historical' ) EXEC ('CREATE SCHEMA [Historical]')
+
 IF NOT EXISTS ( SELECT 1 FROM sys.schemas WHERE name = 'Execution' ) EXEC ('CREATE SCHEMA [Execution]')
+
 IF NOT EXISTS ( SELECT 1 FROM sys.schemas WHERE name = 'Deltalake' ) EXEC ('CREATE SCHEMA [Deltalake]')
+
 
 **Add the following stored procedures:**
 
