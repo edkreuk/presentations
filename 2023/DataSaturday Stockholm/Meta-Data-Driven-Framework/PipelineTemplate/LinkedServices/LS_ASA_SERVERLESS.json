@@ -1,0 +1,30 @@
+{
+	"name": "LS_ASA_SERVERLESS",
+	"properties": {
+		"parameters": {
+			"ConnectionKeyvaultSecret": {
+				"type": "string",
+				"defaultValue": "ASA-OXGN01-LAKEHOUSE"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_AKV_KEYVAULT",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": {
+					"value": "@linkedService().ConnectionKeyvaultSecret",
+					"type": "Expression"
+				}
+			}
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

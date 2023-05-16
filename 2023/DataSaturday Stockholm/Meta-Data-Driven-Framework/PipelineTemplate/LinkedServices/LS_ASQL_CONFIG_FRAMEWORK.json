@@ -1,0 +1,21 @@
+{
+	"name": "LS_ASQL_CONFIG_FRAMEWORK",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_AKV_KEYVAULT",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "ASQL-METADATAFRAMEWORK"
+			}
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

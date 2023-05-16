@@ -1,0 +1,11 @@
+{
+	"name": "LS_AKV_KEYVAULT",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://ededeuwdvlmvaultoxgn01.vault.azure.net/"
+		}
+	}
+}
